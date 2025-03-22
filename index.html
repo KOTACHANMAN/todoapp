@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>転職活動管理アプリ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    form input,
+    form select,
+    form textarea {
+      padding: 5px;
+      font-size: 14px;
+    }
+    .task-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .task-card p {
+      margin: 5px 0;
+    }
+    .delete-btn {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>転職活動管理アプリ</h1>
+
+  <form id="task-form">
+    <input type="text" id="company" placeholder="企業名" required>
+    <input type="text" id="position" placeholder="職種" required>
+
+    <label for="apply-date">応募日</label>
+    <input type="date" id="apply-date">
+
+    <label for="interview-date">面接日</label>
+    <input type="date" id="interview-date">
+
+    <select id="platform" required>
+      <option value="">転職媒体を選択</option>
+      <option value="WORKPORT">WORKPORT</option>
+      <option value="doda">doda</option>
+      <option value="Indeed">Indeed</option>
+      <option value="エンゲージ">エンゲージ</option>
+    </select>
+
+    <select id="status" required>
+      <option value="">ステータスを選択</option>
+      <option value="応募予定">応募予定</option>
+      <option value="応募済み">応募済み</option>
+      <option value="面接予定">面接予定</option>
+      <option value="結果待ち">結果待ち</option>
+      <option value="内定">内定</option>
+      <option value="不採用">不採用</option>
+    </select>
+
+    <textarea id="memo" placeholder="メモ（任意）"></textarea>
+
+    <button type="submit">追加</button>
+  </form>
+
+  <hr>
+
+  <div id="task-list"></div>
+
+  <script src="todoapp.js"></script>
+</body>
+</html>
