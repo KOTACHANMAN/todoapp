@@ -2,33 +2,49 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>転職活動管理アプリ</title>
+  <title>てんしょくん | 転職活動管理アプリ</title>
   <style>
     body {
       font-family: sans-serif;
       padding: 20px;
     }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      color: #555;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
     form {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-bottom: 20px;
     }
+
     form input,
     form select,
     form textarea {
       padding: 5px;
       font-size: 14px;
     }
+
     .task-card {
       border: 1px solid #ccc;
       padding: 10px;
       margin-bottom: 10px;
       border-radius: 5px;
     }
+
     .task-card p {
       margin: 5px 0;
     }
+
     .delete-btn {
       background-color: #f44336;
       color: white;
@@ -41,7 +57,8 @@
 </head>
 <body>
 
-  <h1>転職活動管理アプリ</h1>
+  <h1>てんしょくん</h1>
+  <p class="subtitle">〜 転職活動の管理アプリ 〜</p>
 
   <form id="task-form">
     <input type="text" id="company" placeholder="企業名" required>
@@ -55,10 +72,10 @@
 
     <select id="platform" required>
       <option value="">転職媒体を選択</option>
-      <option value="WORKPORT">WORKPORT</option>
       <option value="doda">doda</option>
+      <option value="WORKPORT">WORKPORT</option>
       <option value="Indeed">Indeed</option>
-      <option value="エンゲージ">エンゲージ</option>
+      <option value="Green">Green</option>
     </select>
 
     <select id="status" required>
